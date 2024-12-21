@@ -1,0 +1,28 @@
+:root {
+    /* Colors */
+    --initial: #fff;
+    --card1-color: #0047FF;
+    --card2-color: #9E00FF;
+    --card3-color: #00BA61;
+    --card4-color: #EB2323;
+
+    /* Navigation Colors */
+    --nav-about: rgba(50, 76, 93, 1);
+    --nav-team: rgba(0, 0, 0, 1);
+    --nav-services: rgba(8, 48, 0, 1);
+    --nav-work: rgba(121, 117, 89, 1);
+    --nav-x: rgba(104, 26, 26, 1);
+
+    /* Text Colors */
+    --text-gray: #a9a9a9;
+    --text-white: #FFFFFF;
+
+    /* Spacing */
+    --card-gap: 20px;
+    --container-padding: 24px;
+    --common-padding: 24px;
+    --common-margin: 0 auto;
+
+    /* Border Radius */
+    --border-radius: 24px;
+}

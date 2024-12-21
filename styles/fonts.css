@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Departure Mono';
+    src: url('../fonts/DepartureMono.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Times New Roman is a system font, so we don't need to include it */

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaMonkes</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Box -->
+        <nav class="nav-box">
+            <div class="logo">
+                <a href="#" class="home-link">AlphaMonkes</a>
+                <img src="assets/logo2.png" alt="AM Logo" class="logo-image">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" data-section="about">About</a></li>
+                <li><a href="#team" data-section="team">Team</a></li>
+                <li><a href="#services" data-section="services">Services</a></li>
+                <li><a href="#work" data-section="work">Work with us</a></li>
+                <li>
+                    <a href="https://twitter.com/alphamonkes" target="_blank">X</a>
+                </li>
+            </ul>
+            <div class="discord-button">
+                <a href="https://discord.gg/alphamonkes" target="_blank" class="join-server">Join the Server</a>
+            </div>
+        </nav>
+        
+        <!-- Content Box -->
+        <main class="content-box">
+            <!-- Landing Page Content -->
+            <div class="content-section active" id="home">
+                <div class="centered-logo">
+                    <img src="assets/logo.svg" alt="AlphaMonkes Logo" class="main-logo">
+                </div>
+            </div>
+
+            <!-- About Page Content -->
+            <div class="content-section" id="about">
+                <h1><span>About Us</span></h1>
+                <div class="about-content">
+                    <p>A token-gated community Discord server for holders of Bitcoin's most elite Ordinal collections.</p>
+                    <p>The server and it's future tools are open to all members from the following communities:</p>
+                    <ul>
+                        <li>NodeMonkes</li>
+                        <li>Bitcoin Puppets</li>
+                        <li>Ordinal Maxi Biz</li>
+                        <li>Quantum Cats</li>
+                        <li>Bitcoin Shrooms</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Team Page Content -->
+            <div class="content-section" id="team">
+                <h1><span>The Team</span></h1>
+                <div class="team-container">
+                    <div class="team-member">
+                        <a href="https://x.com/MadMax_dude" target="_blank">
+                            <img src="assets/madmax.png" alt="Madmax">
+                        </a>
+                        <span>Madmax</span>
+                    </div>
+                    <div class="team-member">
+                        <a href="https://x.com/SALTTHEDEGEN" target="_blank">
+                            <img src="assets/salt.png" alt="Salt">
+                        </a>
+                        <span>Salt</span>
+                    </div>
+                    <div class="team-member">
+                        <a href="https://x.com/Unexpecteditem9" target="_blank">
+                            <img src="assets/unexpected.png" alt="Unexpected">
+                        </a>
+                        <span>Unexpected</span>
+                    </div>
+                </div>
+            </div>
+
+        
+             <!-- Services Content -->
+            <div class="content-section" id="services">
+                <h1><span>Our Services</span></h1>
+                <div class="services-container">
+                    <div class="service-card">
+                        <div class="inner-shadow"></div>
+                        <div class="cursor-blur-wrapper">
+                            <div class="cursor-blur"></div>
+                        </div>
+                        <div class="service-header"><span>Discord Building</span> 🛠️</div>
+                        <div class="service-description">We can build a safe, secure Discord server for your Ordinal community. We'll get you started with roles, permissions, token-gating & customization.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="inner-shadow"></div>
+                        <div class="cursor-blur-wrapper">
+                            <div class="cursor-blur"></div>
+                        </div>
+                        <div class="service-header"><span>Consulting</span> 👍</div>
+                        <div class="service-description">We've seen the best and the worst of launches, tokens, drops & more. We'd love to share our experiences and provide guidance to help make your project a success.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="inner-shadow"></div>
+                        <div class="cursor-blur-wrapper">
+                            <div class="cursor-blur"></div>
+                        </div>
+                        <div class="service-header"><span>Collab Management</span> 🏖️</div>
+                        <div class="service-description">Need help collecting addresses? Allocating spots to great communities? Our team is highly experienced and ready to assist with the process.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="inner-shadow"></div>
+                        <div class="cursor-blur-wrapper">
+                            <div class="cursor-blur"></div>
+                        </div>
+                        <div class="service-header"><span>Polling & Data</span> 📊</div>
+                        <div class="service-description">Want to know what true diamond handers of the top Ordinals collections think about your project? Sponsor a poll with us and we'll find out through our in-house polling bot.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Work with Us Content -->
+            <div class="content-section" id="work">
+                <h1><span>Let's Cook</span> 👨‍🍳</h1>
+                <div class="about-content">
+                    <p>Like our services? Don't hesitate to reach out - let's build together. Join the Discord server and open a ticket or reach out to a team member on X and we'll get back to you ASAP. 🤝</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const contentSections = document.querySelectorAll('.content-section');
+            const homeLink = document.querySelector('.home-link');
+            const contentBox = document.querySelector('.content-box');
+            
+            function showSection(sectionId) {
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                if (sectionId) {
+                    const targetSection = document.querySelector(`#${sectionId}`);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                }
+            }
+            
+            function hideSection(sectionId) {
+                const targetSection = document.querySelector(`#${sectionId}`);
+                if (targetSection) {
+                    targetSection.classList.remove('active');
+                }
+            }
+            
+            // Handle navigation hover and click
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', function(e) {
+                    if (!this.classList.contains('active')) {
+                        const section = this.getAttribute('data-section');
+                        if (section) {
+                            showSection(section);
+                            contentBox.className = 'content-box ' + section + '-bg';
+                        }
+                    }
+                });
+            
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('data-section')) {
+                        e.preventDefault();
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                        const section = this.getAttribute('data-section');
+                        showSection(section);
+                        contentBox.className = 'content-box ' + section + '-bg';
+                    }
+                });
+            });
+            
+            // Handle home link click
+            homeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.forEach(l => l.classList.remove('active'));
+                showSection('home');
+                contentBox.className = 'content-box';
+            });
+        });
+    </script>
+</body>
+</html>

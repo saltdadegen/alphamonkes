@@ -1,0 +1,100 @@
+/* Navigation Styles */
+.nav-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    min-height: 600px;
+    padding: var(--common-padding);
+    background-color: #000;
+    z-index: 100;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--common-padding);
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-family: "Departure Mono";
+    font-size: 24px;
+}
+
+.logo-image {
+    height: 60px;
+    width: 60px;
+    margin-left: 0px;
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-bottom: 16px;
+}
+
+.nav-links a {
+    display: block;
+    padding: var(--common-padding);
+    text-decoration: none;
+    color: white;
+    font-family: "Departure Mono";
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links li:nth-child(1) a:hover { background-color: var(--nav-about); }
+.nav-links li:nth-child(2) a:hover { background-color: var(--nav-team); }
+.nav-links li:nth-child(3) a:hover { background-color: var(--nav-services); }
+.nav-links li:nth-child(4) a:hover { background-color: var(--nav-work); }
+.nav-links li:nth-child(5) a:hover { background-color: var(--nav-x); }
+
+.discord-button {
+    position: absolute;
+    bottom: 40px;
+    width: 300px;
+}
+
+.join-server {
+    display: block;
+    padding: var(--common-padding);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Departure Mono";
+    font-size: 14px;
+    background-color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.join-server:hover {
+    background-color: #1a1a1a;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-box {
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+    }
+}

@@ -1,0 +1,434 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-width: 1100px;
+    min-height: 725px;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Departure Mono', monospace;
+}
+
+.container {
+    min-width: 1100px;
+    min-height: 725px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* Navigation Box Styles */
+.nav-box {
+    width: 25%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    padding: 80px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-family: "Departure Mono";
+    font-size: 24px;
+}
+
+.logo-image {
+    height: 60px;
+    width: 60px;
+    margin-left: 0px;
+    object-fit: contain;
+}
+
+.nav-logo {
+    font-family: "Departure Mono";
+    font-size: 24px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav-logo-image {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 40px 0;
+}
+
+.nav-links li {
+    width: 100%;
+    min-height: 44px;
+}
+
+.nav-links a {
+    display: flex;
+    height: clamp(44px, 8vh, 89px);
+    padding: 24px 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.discord-button {
+    margin-top: auto;
+    padding: 0 40px;
+}
+
+.join-server {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: clamp(0.6rem, 1vw, 0.8rem);
+    width: 100%;
+    border-radius: 4px;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    transition: all 0.3s ease;
+}
+
+.join-server:hover {
+    background: #FF7B00;
+}
+
+/* Content Box Styles */
+.content-box {
+    width: 75%;
+    height: 100vh;
+    background: #FF7B00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Content Section Layout */
+.content-section {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-section.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+/* About Section Styles */
+.about-content, .team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    width: 647px;
+    height: 384px;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    line-height: normal;
+}
+
+.about-content ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* Team Section Styles */
+.team-container {
+    display: flex;
+    width: 760px;
+    height: 413px;
+    padding: 0px 80px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 200px;
+}
+
+.team-member a {
+    text-decoration: none;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+}
+
+.team-member span {
+    color: #FFF;
+    text-align: center;
+    font-family: "Departure Mono";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Services Section Styles */
+.services-container {
+    display: flex;
+    width: 916px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.service-card {
+    position: relative;
+    width: 50%;
+    min-height: 250px;
+    max-height: fit-content;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    overflow: hidden;
+    transition: scale 0.15s, border 0.2s ease-in, background-color 0.8s;
+}
+
+.service-card .inner-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: plus-lighter;
+    box-shadow: inset 0 0 25px -50px;
+    transition: box-shadow 1s, color 0.2s ease-out;
+    z-index: 1;
+}
+
+.service-card .cursor-blur-wrapper {
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.service-card .cursor-blur {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--initial);
+    transform: scale(0);
+    filter: blur(20px);
+    transition: transform 0.5s ease-out, background-color 0.2s ease-in;
+}
+
+.service-card:hover .cursor-blur {
+    transform: scale(2.5);
+    transition: transform 1s, background-color 0.2s ease-in;
+}
+
+.service-card:hover .inner-shadow {
+    box-shadow: inset 0 0 50px 100px;
+}
+
+.service-header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    font-family: "Departure Mono";
+    font-size: clamp(18px, 2vw, 24px);
+    color: #a9a9a9;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.service-description {
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    font-family: "Times New Roman";
+    font-size: clamp(16px, 1.5vw, 20px);
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    color: #a9a9a9;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .service-header,
+.service-card:hover .service-description {
+    color: #FFFFFF;
+}
+
+/* Card Colors */
+:root {
+    --initial: #fff;
+    --card1-color: #0047FF;
+    --card2-color: #9E00FF;
+    --card3-color: #00BA61;
+    --card4-color: #EB2323;
+}
+
+.service-card:nth-child(1):hover .cursor-blur { background-color: var(--card1-color); }
+.service-card:nth-child(2):hover .cursor-blur { background-color: var(--card2-color); }
+.service-card:nth-child(3):hover .cursor-blur { background-color: var(--card3-color); }
+.service-card:nth-child(4):hover .cursor-blur { background-color: var(--card4-color); }
+
+/* Root Variables for Colors */
+:root {
+    --card1-color: #0047FF;
+    --card2-color: #9E00FF;
+    --card3-color: #00BA61;
+    --card4-color: #EB2323;
+}
+
+/* Remove active state from nav links, keep only hover */
+.nav-links a:hover {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: white;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.nav-links li:nth-child(1) a:hover { background-color: rgba(50, 76, 93, 1); }
+.nav-links li:nth-child(2) a:hover { background-color: rgba(0, 0, 0, 1); }
+.nav-links li:nth-child(3) a:hover { background-color: rgba(8, 48, 0, 1); }
+.nav-links li:nth-child(4) a:hover { background-color: rgba(121, 117, 89, 1); }
+.nav-links li:nth-child(5) a:hover { background-color: rgba(104, 26, 26, 1); }
+
+/* Page Titles */
+h1 {
+    color: #FFF;
+    font-family: "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 span {
+    font-style: italic;
+}
+
+#work h1 span {
+    font-style: italic;
+}
+
+/* Background Colors */
+.about-bg { background-color: rgba(50, 76, 93, 1); }
+.team-bg { background-color: rgba(0, 0, 0, 1); }
+.services-bg { background-color: rgba(8, 48, 0, 1); }
+.work-bg { background-color: rgba(121, 117, 89, 1); }
+.x-bg { background-color: rgba(104, 26, 26, 1); }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: row; /* Force row direction */
+    }
+}
+
+@media screen and (max-width: 1475px) {
+    body, .container {
+        width: 1475px;
+        min-width: 1475px;
+    }
+}
+
+.main-logo {
+    width: 600px !important;
+    height: 600px !important;
+    min-width: 200px !important;
+    min-height: 200px !important;
+    object-fit: contain;
+}

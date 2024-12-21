@@ -1,0 +1,124 @@
+/* Services Section Styles */
+.services-container {
+    display: flex;
+    width: 100%;
+    max-width: calc(100% - 80px);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    margin: 0 auto;
+    gap: 0;
+    box-sizing: border-box;
+}
+
+.service-card {
+    position: relative;
+    width: 50%;
+    min-width: 0;
+    min-height: 250px;
+    max-height: fit-content;
+    padding: var(--common-padding);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--card-gap);
+    overflow: hidden;
+    transition: scale 0.15s, border 0.2s ease-in, background-color 0.8s;
+    box-sizing: border-box;
+}
+
+/* Card Header and Description */
+.service-header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    font-family: "Departure Mono";
+    font-size: 24px;
+    color: var(--text-gray);
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.service-description {
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    color: var(--text-gray);
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.service-card .inner-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: plus-lighter;
+    transition: box-shadow 1s, color 0.2s ease-out;
+    z-index: 1;
+}
+
+.service-card .cursor-blur-wrapper {
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.service-card .cursor-blur {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--initial);
+    transform: scale(0);
+    filter: blur(20px);
+    transition: transform 0.5s ease-out, background-color 0.2s ease-in;
+    mix-blend-mode: screen;
+}
+
+/* Hover States */
+.service-card:hover .cursor-blur {
+    transform: scale(2.5);
+    transition: transform 1s, background-color 0.2s ease-in;
+}
+
+.service-card:hover .inner-shadow {
+    box-shadow: none;
+}
+
+.service-card:hover .service-header,
+.service-card:hover .service-description {
+    color: var(--text-white);
+}
+
+.service-card:nth-child(1):hover .cursor-blur { background-color: var(--card1-color); }
+.service-card:nth-child(2):hover .cursor-blur { background-color: var(--card2-color); }
+.service-card:nth-child(3):hover .cursor-blur { background-color: var(--card3-color); }
+.service-card:nth-child(4):hover .cursor-blur { background-color: var(--card4-color); }
