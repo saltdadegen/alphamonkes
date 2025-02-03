@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alphamonkes/static/css/main.9a96cb50.css",
-    "main.js": "/alphamonkes/static/js/main.6cd6e473.js",
+    "main.js": "/alphamonkes/static/js/main.6dae7472.js",
     "static/js/713.d92ba5a2.chunk.js": "/alphamonkes/static/js/713.d92ba5a2.chunk.js",
     "static/js/488.7f41100c.chunk.js": "/alphamonkes/static/js/488.7f41100c.chunk.js",
     "static/js/208.a7a464e6.chunk.js": "/alphamonkes/static/js/208.a7a464e6.chunk.js",
@@ -12,9 +12,10 @@
     "static/js/946.42ed86f4.chunk.js": "/alphamonkes/static/js/946.42ed86f4.chunk.js",
     "static/js/160.f2dd96b7.chunk.js": "/alphamonkes/static/js/160.f2dd96b7.chunk.js",
     "static/js/23.98c8bbc0.chunk.js": "/alphamonkes/static/js/23.98c8bbc0.chunk.js",
+    "static/media/Monke.svg": "/alphamonkes/static/media/Monke.03bbc3f242c0368ddc1a3a981335e11b.svg",
     "index.html": "/alphamonkes/index.html",
     "main.9a96cb50.css.map": "/alphamonkes/static/css/main.9a96cb50.css.map",
-    "main.6cd6e473.js.map": "/alphamonkes/static/js/main.6cd6e473.js.map",
+    "main.6dae7472.js.map": "/alphamonkes/static/js/main.6dae7472.js.map",
     "713.d92ba5a2.chunk.js.map": "/alphamonkes/static/js/713.d92ba5a2.chunk.js.map",
     "488.7f41100c.chunk.js.map": "/alphamonkes/static/js/488.7f41100c.chunk.js.map",
     "208.a7a464e6.chunk.js.map": "/alphamonkes/static/js/208.a7a464e6.chunk.js.map",
@@ -28,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.9a96cb50.css",
-    "static/js/main.6cd6e473.js"
+    "static/js/main.6dae7472.js"
   ]
 }
