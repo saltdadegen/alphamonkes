@@ -27,7 +27,6 @@ yarn-error.log*
 /.vscode
 /.idea
 /.DS_Store
-/public
 /config
 /src/serviceWorker.js
 /build
